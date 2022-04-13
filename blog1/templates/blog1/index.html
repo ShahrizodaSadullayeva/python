@@ -1,0 +1,530 @@
+{% extends 'blog1/base.html' %}
+{% load static %}
+
+{% block content %}
+      <nav>
+        <div class = "logo">
+            <img src="{% static 'blog1/images/logo.png' %}" alt="">
+            <p class = "animation-text">SKILLCARE</p>
+        </div>
+        <div class = "navv">
+            <a class = "home animation-text menuus" id = "home" href="{% url 'blog1:home' %}">Home</a>
+            <div class = "span1 spann" id = "span1"></div>
+        </div>
+        <div class = "navv">
+            <a class = "coursee animation-text" id = "course" href="{% url 'blog1:course' %}">Course</a>
+            <div class = "span2" id = "span2"></div>
+        </div>
+        <div class = "navv">
+            <a class = "about animation-text" id = "about" href="{% url "blog1:about" %}">About</a>
+            <div class = "span3" ></div>
+        </div>
+        <div class = "navv">
+            <a class = "log animation-text" id = "log" href="{% url 'blog3:registration' %}">Registration</a>
+            <div class = "span5" id = "span5"></div>
+        </div>
+        <a href ="{% url 'blog3:signup' %}" class = "login">Sign up</a>
+    </nav>
+
+    <section class = "sec1">
+        <div class = "sec1_1">
+            <div class ="sec_p">
+                <p class = "p1 animation-text">Start Your Learning Our</p>
+                <p class = "p2 animation-text">Experts Trainers</p>
+                <p class = "p3">Lorem ipsum dolor sit amet consectetur adipisicing elit.eat soluta sequi voluptatibus consequatur perferendis laudantium consequuntur ad quae.!</p>
+            </div>
+            <div class = "sec_but">
+                <a href="./Course.html">Join for Free</a>
+                <div class = "play">
+                    <img src="{% static 'blog1/images/Polygon 1.png' %}" alt="">
+                </div>
+                <p>Play Now</p>
+            </div>
+        </div>
+        <div class = "sec1_2 select-div-animation">
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class = "girl" src="{% static 'blog1/images/girl.png' %}" alt="">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img class = "girl" src="{% static 'blog1/images/girl2.png' %}" alt="">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img class = "girl" src="{% static 'blog1/images/girl3.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class = "congratulation">
+                <img class = "congratulation_img" src="{% static 'blog1/images/sms.png' %}" alt="">
+                <div class = "congratulation_p">
+                    <div class = "yes">
+                        <p class = "cong_p1">Congratulation</p>
+                        <img class = "yes_img" src="{% static 'blog1/images/check.png' %}" alt="">
+                    </div>
+                    <p class = "cong_p2">Your Addmission Is Completed</p>
+                </div>
+            </div>
+
+            <div class = "price">
+                <img src="{% static 'blog1/images/price.png' %}" alt="">
+                <p class = "price_p1">10000+</p>
+                <p class = "price_p2">Interactive Courses</p>
+            </div>
+
+            <div class = "student">
+                <div class = "K">
+                    <p>20K Students</p>
+                    <img src="{% static 'blog1/images/icon.png' %}" alt="">
+                </div>
+                <div class = "K_img">
+                    <img class = "K_img1" src="{% static 'blog1/images/student1.png' %}" alt="">
+                    <img class = "K_img2" src="{% static 'blog1/images/student2.png' %}" alt="">
+                    <img class = "K_img3" src="{% static 'blog1/images/student3.png' %}" alt="">
+                    <div class = "plus">
+                        <img src="{% static 'blog1/images/plus.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class = "web">
+                 <img src="{% static 'blog1/images/Ellipse 25.png' %}" alt="">
+                 <div class = "web_develop">
+                    <p class = "web_p1">Web Development Class</p>
+                    <p class = "web_p2">Tomorrow at 10.00 AM</p>
+                    <button>Join now</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class = "feature">
+        <div class = "course">
+            <img src="{% static 'blog1/images/Course.png' %}" alt="">
+            <p>10000+ Online Course</p>
+        </div>
+        <div class = "expert">
+            <img src="{% static 'blog1/images/Expert Icon.png' %}" alt="">
+            <p>Expert Instruction</p>
+        </div>
+        <div class = "infinity">
+            <img src="{% static 'blog1/images/infinity.png' %}" alt="">
+            <p>Lifetime Access</p>
+        </div>
+    </section>
+
+    <section class = "logos">
+        <p>Trusted By 500+ Leading Universities And Companies</p>
+        <div class = "logo_img">
+            <img src="{% static 'blog1/images/uipath-logo.png' %}" alt="">
+            <img src="{% static 'blog1/images/alteryx-logo.png' %}" alt="">
+            <img src="{% static 'blog1/images/google-logo.png' %}" alt="">
+            <img src="{% static 'blog1/images/ibm-logo.png' %}" alt="">
+            <img src="{% static 'blog1/images/microsoft-logo.png' %}" alt="">
+            <img src="{% static 'blog1/images/mode-logo.png' %}" alt="">
+        </div>
+    </section>
+
+    <section class = "online select-div-animation">
+        <p class = "on_p">Browse Online Course Categories</p>
+        <div class = "on_span">
+            <span class = on_span1></span>
+            <span class = "on_span2"></span>
+        </div>
+        <div class = "on_cards">
+            <div class = "on_card1">
+                <img src="{% static 'blog1/images/Ui UX icon.png' %}" alt="">
+                <p>UI UX design</p>
+            </div>
+
+            <div class = "on_card2">
+                <img src="{% static 'blog1/images/Web icon.png' %}" alt="">
+                <p>Web development</p>
+            </div>
+
+            <div class = "on_card3">
+                <img src="{% static 'blog1/images/Graphic Icon.png' %}" alt="">
+                <p>Graphic design</p>
+            </div>
+
+            <div class = "on_card4">
+                <img src="{% static 'blog1/images/Data Science icon.png' %}" alt="">
+                <p>Data Science</p>
+            </div>
+
+            <div class = "on_card5">
+                <img src="{% static 'blog1/images/Digital marketing icon.png' %}" alt="">
+                <p>Digital Marketing</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class = "Cards carousel slide" data-ride="carousel" id = "Cards">
+
+        <ol class = "card_menu carousel-indicators">
+            <li data-target = "#Cards" data-slide-to = "0" class = "Programming active">
+                Programming
+            </li>
+            <li data-target = "#Cards" data-slide-to = "1" class = "Design">
+                Design
+            </li>
+            <li data-target = "#Cards" data-slide-to = "2" class = "Business">
+                Business
+            </li>
+            <li data-target = "#Cards" data-slide-to = "3" class = "Health">
+                Health
+            </li>
+            <li data-target = "#Cards" data-slide-to = "4" class = "Music">
+                Music
+            </li>
+        </ol>
+
+        <div class = "carousel-inner">
+            <div  class ="item active">
+                <div class =" allCard">
+                    <p class = "cards_name animation-text">Explore Most Popular Courses</p>
+                    <div class = "cards" id = "card1">
+                        <a href = "{% url 'blog2:python' %}" class = "card select-div-animation">
+                            <img class = "card_base_img" src="{% static 'blog1/images/Card1.png' %}" alt="">
+                            <div class = "card_profil">
+                                <div class = "profil_img">
+                                    <img src="{% static 'blog1/images/Ellipse 30.png' %}" alt="">
+                                    <p>Alex Maxwel</p>
+                                </div>
+                                <div class = "profil_but">
+                                    <div class = "circle"></div>
+                                    <p>Web design</p>
+                                </div>
+                            </div>
+
+                            <p class = "card_name">Web Design and Development Crash Course 2022</p>
+
+                            <div class = "card_ball">
+                                <div class = "card_hour">
+                                    <img src="{% static 'blog1/images/Hour.png' %}" alt="">
+                                    <p>16 hr 30 mins</p>
+                                </div>
+                                <p class = "card_ball_p">Best Seller</p>
+                            </div>
+
+                            <div class = "cards_cost">
+                                <div class = "card_cost">
+                                    <p class = "new_cost">$120</p>
+                                    <p class = "old_cost">$180</p>
+                                </div>
+                                <div class = "cost_ball">
+                                    <p class = "ball_num">5.0</p>
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class = "card select-div-animation">
+                            <img class = "card_base_img" src="{% static 'blog1/images/card2.png' %}" alt="">
+                            <div class = "card_profil">
+                                <div class = "profil_img">
+                                    <img src="{% static 'blog1/images/Ellipse 2.png' %}" alt="">
+                                    <p>Cristian Doru Barin</p>
+                                </div>
+                                <div class = "profil_but">
+                                    <div class = "circle"></div>
+                                    <p>Machine</p>
+                                </div>
+                            </div>
+
+                            <p class = "card_name">Machine Learning Data Science and Deep Learning</p>
+
+                            <div class = "card_ball">
+                                <div class = "card_hour">
+                                    <img src="{% static 'blog1/images/Hour.png' %}" alt="">
+                                    <p>20 hr 30 mins</p>
+                                </div>
+                                <p class = "card_ball_p">Best Seller</p>
+                            </div>
+
+                            <div class = "cards_cost">
+                                <div class = "card_cost">
+                                    <p class = "new_cost">$150</p>
+                                    <p class = "old_cost">$200</p>
+                                </div>
+                                <div class = "cost_ball">
+                                    <p class = "ball_num">5.0</p>
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div  class = "card select-div-animation">
+                            <img class = "card_base_img" src="{% static 'blog1/images/Card3.png' %}" alt="">
+                            <div class = "card_profil">
+                                <div class = "profil_img">
+                                    <img src="{% static 'blog1/images/Ellipse 3.png' %}" alt="">
+                                    <p>Jose Portilla</p>
+                                </div>
+                                <div class = "profil_but">
+                                    <div class = "circle"></div>
+                                    <p>Data Science</p>
+                                </div>
+                            </div>
+
+                            <p class = "card_name">Python for Data Science and Machine Learning Bootcamp</p>
+
+                            <div class = "card_ball">
+                                <div class = "card_hour">
+                                    <img src="{% static 'blog1/images/Hour.png' %}" alt="">
+                                    <p>36 hr 30 mins</p>
+                                </div>
+                                <p class = "card_ball_p">Best Seller</p>
+                            </div>
+
+                            <div class = "cards_cost">
+                                <div class = "card_cost">
+                                    <p class = "new_cost">$250</p>
+                                    <p class = "old_cost">$300</p>
+                                </div>
+                                <div class = "cost_ball">
+                                    <p class = "ball_num">4.9</p>
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                    <img src="{% static 'blog1/images/Vector.png' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+           <div class = "item">
+                <div class =" allCard">
+                    <p class = "cards_name animation-text">Lorem ipsum dolor sit amet.</p>
+                    <section class = " Card_design sec1">
+                        <div class = "sec1_1">
+                            <div class ="sec_p">
+                                <p class = "p1 animation-text">Start Your Learning Our</p>
+                                <p class = "p3">Lorem ipsum dolor sit amet consectetur adipisicing elit.eat soluta sequi voluptatibus consequatur perferendis laudantium consequuntur ad quae.!</p>
+                            </div>
+                            <div class = "sec_but">
+                                <a class = "btn btn-primary" href="https://www.ideou.com/blogs/inspiration/what-is-design-thinking">Join for Free</a>
+                            </div>
+                        </div>
+                        <div class = "sec1_2 select-div-animation">
+                            <img class = "girl" src="{% static 'blog1/images/disegn.png' %}" alt="">
+                        </div>
+                    </section>
+                </div>
+           </div>
+
+           <div class = "item">
+                <div class =" allCard">
+                    <p class = "cards_name animation-text">Explore Most Popular Courses</p>
+                    <div class = "Card_business">
+                        <div class = "business1">
+                            <img src="{% static 'blog1/images/business_pic.png' %}" alt="">
+                            <div class = "business1_1">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, quis.</p>
+                                <a class = "btn btn-primary" href="https://www.investopedia.com/terms/b/business.asp">Learn more</a>
+                            </div>
+                        </div>
+                        <div class = "business2">
+                            <div class = "business2_1">
+                                <div class = "business_infor">
+                                    <img src="{% static 'blog1/images/business_true.png' %}" alt="">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                </div>
+                                <div class = "business_infor">
+                                    <img src="{% static 'blog1/images/business_true.png' %}" alt="">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit.</p>
+                                </div>
+                                <div class = "business_infor">
+                                    <img src="{% static 'blog1/images/business_true.png' %}" alt="">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem, ipsum dolor.</p>
+                                </div>
+                                <div class = "business_infor">
+                                    <img src="{% static 'blog1/images/business_true.png' %}" alt="">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <div class = "business2_2">
+                                <div class = "business_infor">
+                                    <img src="{% static 'blog1/images/business_true.png' %}" alt="">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                </div>
+                                <div class = "business_infor">
+                                    <img src="{% static 'blog1/images/business_true.png' %}" alt="">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                                <div class = "business_infor">
+                                    <img src="{% static 'blog1/images/business_true.png' %}" alt="">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit.</p>
+                                </div>
+                                <div class = "business_infor">
+                                    <img src="{% static 'blog1/images/business_true.png' %}" alt="">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+
+           <div class = "item">
+                <div class =" allCard">
+                    <p class = "cards_name animation-text">Explore Most Popular Courses</p>
+                    <div class = "Card_health">
+                        <div class = "health_div">
+                            <h1>Lorem, ipsum dolor.</h1>
+                            <ul class = "health_infor">
+                                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quam?</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ipsa doloremque quia ducimus quibusdam libero accusantium!</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                            <a href="https://www.agegracefullyamerica.com/" class = "btn btn-danger">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "item">
+                <div class =" allCard">
+                    <p class = "cards_name animation-text">Explore Most Popular Courses</p>
+                    <div class = "Card_music">
+                        <div class = "music_div">
+                            <div class = "mus_card1 music-card">
+                                <img class = "mus1" src="{% static 'blog1/images/sauntrik_music.jpg' %}" alt="">
+                                <a href="https://useraudio.net/search/%D1%81%D0%B0%D1%83%D0%BD%D0%B4%D1%82%D1%80%D0%B5%D0%BA">SoundTrack Music</a>
+                            </div>
+                            <div class = "music-card mus_card2">
+                                <img class = "mus2" src="{% static 'blog1/images/korean_music.jpg' %}" alt="">
+                                <a href="https://english.visitkorea.or.kr/enu/AKR/AK_ENG_2_5.jsp">Music in Korea</a>
+                            </div>
+                            <div class = "music-card mus_card3">
+                                <img class = "mus3" src="{% static 'blog1/images/rus_music.jpg' %}" alt="">
+                                <a href="https://www.shazam.com/ru/charts/top-200/russia">Best Russian Music</a>
+                            </div>
+                            <div class = "music-card mus_card4">
+                                <img class = "mus4" src="{% static 'blog1/images/pop_music.jpg' %}" alt="">
+                                <a href="https://pop-music.ru/">Pop Songs</a>
+                            </div>
+                        </div>
+                        <div class = "music_div">
+                            <div class = "music-card mus_card5">
+                                <img class = "mus5" src="{% static 'blog1/images/rock_music.jpg' %}" alt="">
+                                <a href="https://www.timeout.com/music/best-classic-rock-songs-of-all-time">Best English Songs</a>
+                            </div>
+                            <div class = "music-card mus_card6">
+                                <img class = "mus6" src="{% static 'blog1/images/bass_music.jpg' %}" alt="">
+                                <a href="https://www.youtube.com/watch?v=k33iwvL9pQc">Bass Music</a>
+                            </div>
+                            <div class = "music-card mus_card7">
+                                <img class = "mus7" src="{% static 'blog1/images/arabic_music.jfif' %}" alt="">
+                                <a href="https://music.xn--41a.ws/artist/arabic/">Arabic Music Mix</a>
+                            </div>
+                            <div class = "music-card mus_card8">
+                                <img class= "mus8" src="{% static 'blog1/images/uzb_music.jpg' %}" alt="">
+                                <a href="https://xmuz.net/">Uzbek Music</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <section class = "learning">
+        <div class = "learn1">
+            <div class = "learn_name">
+                <p class = "l_n1">Benefits Of Learning From</p>
+                <p class = "l_n2">SkillCare</p>
+            </div>
+            <p class = "learn_data">Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo accusantium corporis assumenda necessitatibus mollinus tempore labore nostrum.</p>
+            <div class = "learn_btn">
+                <a href="./Course.html" class = "learnbt">Start learning</a>
+                <a href="https://en.wikipedia.org/wiki/List_of_programming_languages">Read more</a>
+            </div>
+        </div>
+
+        <div class = "learn2">
+            <div class = "learn_design">
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <img class = "Learn_img" src="{% static 'blog1/images/Learn.png' %}" alt="">
+            <div class = "learn_play">
+                <div class = "play_dsn">
+                    <img src="{% static 'blog1/images/Play.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class = "interest">
+            <p>Are you interested in becoming an instructor</p>
+            <a class = "btn btn-primary" href = "https://www.zippia.com/instructor-jobs/">Join with us</a>
+    </section>
+
+{% endblock %}

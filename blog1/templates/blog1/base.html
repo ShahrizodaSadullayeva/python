@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog1/css/style.css'  %}">
+    <link rel="stylesheet" href="{% static 'blog1/css/animation.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <title>Diplom</title>
+</head>
+<body>
+    <div class = "body"></div>
+{% block content %}
+
+    {% endblock  %}
+ <section class = "foot">
+    </section>
+
+
+    <footer>
+        <div class = "service">
+            <h1>Services</h1>
+            <a href="https://www.indeed.com/q-Online-Instructor-jobs.html?vjk=db8903dc7febc85f">Online Instructor</a>
+            <a href="{% url 'blog1:course' %}">Premium E Course</a>
+            <a href="{% url 'blog2:book' %}">E Books</a>
+            <a href="{% url 'blog1:home' %}">Our Blogs</a>
+        </div>
+        <div class = "information">
+            <h1>Information</h1>
+            <a href="{% url 'blog3:registration' %}">Join us</a>
+            <a href="https://www.groupon.com/coupons/amazon">Get Promo</a>
+            <a href="https://support.squarespace.com/hc/en-us/articles/115015517328-Premium-features">Premium Feature</a>
+            <a href="https://www.thefreedictionary.com/schedule">Schedule</a>
+        </div>
+        <div class = "company">
+            <h1>Company</h1>
+            <a href="https://www.gov.uk/set-up-business-partnership">Patnership</a>
+            <a href="https://termify.io/terms-of-use-generator?gclid=CjwKCAiAl-6PBhBCEiwAc2GOVGW482XOXkuA71T9De24nJPqZ4KMsBoZWmHffZqT-xFhspr17IN98xoChiUQAvD_BwE">Terms of Use</a>
+            <a href = "{% url 'blog1:about' %}">About</a>
+            <a href="{% url 'blog1:about' %}">Contact</a>
+        </div>
+        <div class = "get_in">
+            <h1>Get In Touch</h1>
+            <p>Follow us on social media and stay updated with the latest information bout our services</p>
+            <div class = "contact_logo">
+                <img src="{% static 'blog1/images/instagram.jpg' %}" alt="">
+                <img src="{% static 'blog1/images/tg.jpg' %}" alt="">
+                <img src="{% static 'blog1/images/twitter.jpg' %}" alt="">
+                <img src="{% static 'blog1/images/facebook.jpg' %}" alt="">
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="{% static 'blog1/javascript/main.js' %}"></script>
+<script src="{% static 'blog1/javascript/animation.js' %}"></script>
+</html>

@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog2/css/py_style.css' %}">
+    <link rel="stylesheet" href="{% static 'blog2/css/animation.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <title>Diplom</title>
+</head>
+<body>
+    <div class = "body"></div>
+    <nav>
+        <div class = "logo">
+            <img src="{% static 'blog2/images/Logo.png' %}" alt="">
+            <p class = "animation-text">SKILLCARE</p>
+        </div>
+        <div class = "navv">
+            <a class = "home animation-text" id = "home" href="{% url 'blog1:home' %}">Home</a>
+            <div class = "span1" id = "span1"></div>
+        </div>
+        <div class = "navv">
+            <a class = "coursee animation-text  menuu " id = "course" href="{% url 'blog1:course' %}">Course</a>
+            <div class = "span2 spaan" id = "span2"></div>
+        </div>
+        <div class = "navv">
+            <a class = "about animation-text" id = "about" href="{% url 'blog1:about' %}">About</a>
+            <div class = "span3" id = "span3"></div>
+        </div>
+        <div class = "navv">
+            <a class = "log animation-text" id = "log" href="{% url 'blog3:registration' %}">Registration</a>
+            <div class = "span5" id = "span5"></div>
+        </div>
+        <a href="{% url 'blog3:signup' %}" class = "login">Sign up</a>
+    </nav>
+
+     <div  class = "python_logo select-div-animation">
+        <img class = "p_logo_img" src="{% static 'blog2/images/logo.svg.png' %}" alt="">
+        <div class = "p_logo_p">
+            <p class = "logo_p1">P</p>
+            <p class = "logo_p2">y</p>
+            <p class = "logo_p3">t</p>
+            <p class = "logo_p4">h</p>
+            <p class = "logo_p5">o</p>
+            <p class = "logo_p6">n</p>
+        </div>
+    </div>
+{% block content %}
+
+
+{% endblock %}
+
+
+
+
+<section class = "foot">
+</section>
+   <footer>
+        <div class = "service">
+            <h1>Services</h1>
+            <a href="https://www.indeed.com/q-Online-Instructor-jobs.html?vjk=db8903dc7febc85f">Online Instructor</a>
+            <a href="{% url 'blog1:course' %}">Premium E Course</a>
+            <a href="">E Books</a>
+            <a href="{% url 'blog1:home' %}">Our Blogs</a>
+        </div>
+        <div class = "information">
+            <h1>Information</h1>
+            <a href="">Join us</a>
+            <a href="https://www.groupon.com/coupons/amazon">Get Promo</a>
+            <a href="https://support.squarespace.com/hc/en-us/articles/115015517328-Premium-features">Premium Feature</a>
+            <a href="https://www.thefreedictionary.com/schedule">Schedule</a>
+        </div>
+        <div class = "company">
+            <h1>Company</h1>
+            <a href="https://www.gov.uk/set-up-business-partnership">Patnership</a>
+            <a href="https://termify.io/terms-of-use-generator?gclid=CjwKCAiAl-6PBhBCEiwAc2GOVGW482XOXkuA71T9De24nJPqZ4KMsBoZWmHffZqT-xFhspr17IN98xoChiUQAvD_BwE">Terms of Use</a>
+            <a href = "{% url 'blog1:about' %}">About</a>
+            <a href="{% url 'blog1:about' %}">Contact</a>
+        </div>
+        <div class = "get_in">
+            <h1>Get In Touch</h1>
+            <p>Follow us on social media and stay updated with the latest information bout our services</p>
+            <div class = "contact_logo">
+                <img src="{% static 'blog1/images/instagram.jpg' %}" alt="">
+                <img src="{% static 'blog1/images/tg.jpg' %}" alt="">
+                <img src="{% static 'blog1/images/twitter.jpg' %}" alt="">
+                <img src="{% static 'blog1/images/facebook.jpg' %}" alt="">
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="{% static 'blog1/javascript/main.js' %}"></script>
+<script src="{% static 'blog1/javascript/animation.js' %}"></script>
+</html>

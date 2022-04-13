@@ -1,0 +1,165 @@
+{% extends 'blog2/base2.html' %}
+{% load static%}
+
+{% block content %}
+
+    <section class = "python_nav">
+        <ul class = "p_ul">
+            <li><a class ="animation-text" href="{% url 'blog2:python' %}">Home</a></li>
+            <li><a class ="animation-text" href="">About</a></li>
+            <li  class = "nav11" id = "nav3 "><a class ="animation-text" href="{% url 'blog2:book' %}">Books</a></li>
+            <li id = "nav4"><a class ="animation-text" href="{% url 'blog2:video' %}">Videos</a></li>
+            <li id = "nav5"><a class ="animation-text" href="{% url 'blog2:comment' %}">Comments</a></li>
+            <li class = "lang">Lang
+                <ul class = "langs">
+                    <li class ="animation-text"> English</li>
+                    <li class ="animation-text">Russian</li>
+                    <li class ="animation-text">Uzbek</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id = "bookss" class = "py_book">
+        <form method="get" action="{% url 'blog2:search_book' %}" class = "py_search">
+                        <input class="form-control tm-search-input" name="query_book" type="text" placeholder="Search..." aria-label="Search">
+                        <button class="tm-search-button" type="submit">
+                              <img src="{% static 'blog2/images/search.png' %}" alt="">
+                        </button>
+                    </form>
+
+<h4 style="margin-left: -70% !important;">All books: {{ book_count}}</h4>
+
+
+        <div  class = "book_part">
+            {% for books in book %}
+            <div class = "book_div">
+                <img  src="{{ books.image.url }}" alt="">
+                <p class = "book_name">{{ books.name}}</p>
+                <p class = "py_btn">Download</p>
+            </div>
+            {% endfor %}
+{##}
+{#            <div class = "book_div">#}
+{#                <img onclick="carusell('carusel2', 'bookss')" src="{% static 'blog2/images/book1.jpg' %}" alt="">#}
+{#                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor</p>#}
+{#                <p class = "py_btn">Download</p>#}
+{#            </div>#}
+{##}
+{##}
+{#            <div class = "book_div">#}
+{#                <img onclick = "carusell('carusel2', 'bookss')" src="{% static 'blog2/images/book1.jpg' %}" alt="">#}
+{#                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>#}
+{#                <p class = "py_btn">Download</p>#}
+{#            </div>#}
+{##}
+{##}
+{#            <div class = "book_div">#}
+{#                <img src="{% static 'blog2/images/book1.jpg' %}" alt="">#}
+{#                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>#}
+{#                <p class = "py_btn">Download</p>#}
+{#            </div>#}
+
+{#            <div class = "book_div">#}
+{#                <img src="{% static 'blog2/images/book1.jpg' %}" alt="">#}
+{#                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>#}
+{#                <p class = "py_btn">Download</p>#}
+{#            </div>#}
+{#            <div class = "book_div">#}
+{#                <img src="{% static 'blog2/images/book1.jpg' %}" alt="">#}
+{#                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>#}
+{#                <p class = "py_btn">Download</p>#}
+{#            </div>#}
+
+        </div>
+
+
+    <div class="pagination">
+  {% if book.has_previous %}
+      <a href="?page={{ book.previous_page_number }}">Prev</a>
+      {% else %}
+      <a  href="#" class = "disabled">Prev</a>
+    {% endif %}
+
+         {% if book.has_previous  %}
+      <a href="?page={{ book.previous_page_number }}">{{ book.previous_page_number }}</a>
+        {% endif %}
+      <a href="?page={{book.number}}" class="active">{{ book.number }}</a>
+    {% if  book.has_next%}
+      <a href="?page={{ book.next_page_number }}">{{ book.next_page_number }}</a>
+    {% endif %}
+    {% if book.has_next %}
+      <a href="?page={{ book.next_page_number }}">Next</a>
+    {% else %}
+        <a class = "disabled" href="">Next</a>
+    {% endif %}
+    </div>
+
+    </section>
+
+
+
+
+    <!-- <div id="carusel2"  class = "carousel" data-flickity>
+        <div class = "carousel-cell carousel_book">
+            <div class = "book_div">
+                <img src="book3.jpg" alt="">
+                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                <p class = "py_btn">Download</p>
+            </div>
+        </div>
+        <div class = "carousel-cell carousel_book">
+            <div class = "book_div">
+                <img src="book4.jpg" alt="">
+                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                <p class = "py_btn">Download</p>
+            </div>
+        </div>
+        <div class = "carousel-cell carousel_book">
+            <div class = "book_div">
+                <img src="book3.jpg" alt="">
+                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                <p class = "py_btn">Download</p>
+            </div>
+        </div>
+        <div class = "carousel-cell carousel_book">
+            <div class = "book_div">
+                <img src="book4.jpg" alt="">
+                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                <p class = "py_btn">Download</p>
+            </div>
+        </div>
+        <div class = "carousel-cell carousel_book">
+            <div class = "book_div">
+                <img src="book4.jpg" alt="">
+                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                <p class = "py_btn">Download</p>
+            </div>
+        </div>
+        <div class = "carousel-cell carousel_book">
+            <div class = "book_div">
+                <img src="book4.jpg" alt="">
+                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                <p class = "py_btn">Download</p>
+            </div>
+        </div>
+        <div class = "carousel-cell carousel_book">
+            <div class = "book_div">
+                <img src="book3.jpg" alt="">
+                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                <p class = "py_btn">Download</p>
+            </div>
+        </div>
+        <div class = "carousel-cell carousel_book">
+            <div class = "book_div">
+                <img src="book4.jpg" alt="">
+                <p class = "book_name">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                <p class = "py_btn">Download</p>
+            </div>
+        </div>
+
+    </div> -->
+
+
+
+{% endblock %}

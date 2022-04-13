@@ -1,0 +1,105 @@
+{% extends 'blog1/base.html' %}
+{% load static %}
+{% block content %}
+  <nav>
+        <div class = "logo">
+            <img src="{% static 'blog1/images/logo.png' %}" alt="">
+            <p class = "animation-text">SKILLCARE</p>
+        </div>
+        <div class = "navv">
+            <a class = "home animation-text" id = "home" href="{% url 'blog1:home' %}">Home</a>
+            <div class = "span1" id = "span1"></div>
+        </div>
+        <div class = "navv">
+            <a class = "coursee animation-text " id = "course" href="{% url 'blog1:course' %}">Course</a>
+            <div class = "span2" id = "span2"></div>
+        </div>
+        <div class = "navv">
+            <a class = "about animation-text menuus" id = "about" href="{% url 'blog1:about' %}">About</a>
+            <div class = "span3 spann" id = "span3"></div>
+        </div>
+        <div class = "navv">
+            <a class = "log animation-text" id = "log" href="{% url 'blog3:registration' %}">Registration</a>
+            <div class = "span5" id = "span5"></div>
+        </div>
+        <a href=""{% url 'blog3:signup' %} class = "login">Sign up</a>
+    </nav>
+      <section class = "learning">
+        <div class = "learn1">
+            <div class = "learn_name">
+                <p class = "l_n1">Benefits Of Learning From</p>
+                <p class = "l_n2">SkillCare</p>
+            </div>
+            <p class = "learn_data">Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo accusantium corporis assumenda necessitatibus mollinus tempore labore nostrum.</p>
+            <div class = "learn_btn">
+                <a href="./Course.html" class = "learnbt">Start learning</a>
+                <a href="https://en.wikipedia.org/wiki/List_of_programming_languages">Read more</a>
+            </div>
+        </div>
+
+        <div class = "learn2">
+            <div class = "learn_design">
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class = "dsg">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <img class = "Learn_img" src="{% static 'blog1/images/Learn.png' %}" alt="">
+            <div class = "learn_play">
+                <div class = "play_dsn">
+                    <img src="{% static 'blog1/images/Play.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class = "interest">
+            <p>Are you interested in becoming an instructor</p>
+            <a class = "btn btn-primary" href = "https://www.zippia.com/instructor-jobs/">Join with us</a>
+    </section>
+
+
+{% endblock %}
